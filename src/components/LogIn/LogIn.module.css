@@ -1,0 +1,8 @@
+a {
+    text-decoration: none;
+}
+
+.LogInForm {
+    display: flex;
+    flex-direction: column;
+}

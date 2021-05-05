@@ -1,0 +1,28 @@
+.navBar {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(161, 161, 161);
+    height: 50px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.navBar .addBtn {
+    width: 50%;
+    height: 40px;
+
+    background: linear-gradient(202.17deg, #FF00D6 8.58%, #FF4D00 91.42%);
+    border-radius: 20px;
+}
+
+.navBar i {
+    margin-left: 42%;
+    margin-top: 10%;
+    font-size: 24px;
+    color: black;
+}
+

@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+import LoggedOut from './components/LoggedOut/LoggedOut.jsx'
+import Register from './components/Register/Register.jsx'
+import LogIn from './components/LogIn/LogIn.jsx'
+import NameForm from './components/NameForm/NameForm.jsx'
+import HomePage from './components/HomePage/HomePage.jsx'
+import Search from './components/HomePage/Search/Search.jsx'
+import Chats from './components/HomePage/Chats/Chats.jsx'
+import Profile from './components/HomePage/Profile/Profile.jsx'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route path={'/loggedout'}>
+            <LoggedOut/>
+          </Route>
+          <Route path={'/registration'}>
+            <Register/>
+          </Route>
+          <Route path={'/name'}>
+            <NameForm/>
+          </Route>
+          <Route path={'/login'}>
+            <LogIn/>
+          </Route> 
+          <Route path={'/home'}>
+            <HomePage/>
+          </Route>
+          <Route path={'/search'}>
+            <Search/>
+          </Route>
+          <Route path={'/chats'}>
+            <Chats/>
+          </Route>
+          <Route path={'/profile'}>
+            <Profile/>
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
