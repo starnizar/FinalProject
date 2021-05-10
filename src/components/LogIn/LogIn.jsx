@@ -15,7 +15,7 @@ const LogIn = () => {
         const mailLog = users.filter(item => item.mail === mailInputRef.current.value)
         if (mailLog[0] !== undefined) {
             if(mailLog[0].password === passwordInputRef.current.value) {
-                alert(`Welcome back, ${mailLog[0].userName}`)
+                alert(`Welcome back, ${mailLog[0].name}`)
                 setCookie('currentUserID', mailLog[0].id, { path: '/' })
                 location.push('/home')
             } else {
@@ -30,7 +30,7 @@ const LogIn = () => {
             </Link>
             <h1>Log in</h1>
             <form onSubmit={LoggingIn} className={styles.LogInForm}>
-                <input placeholder={'example@mail.com'} required ref={mailInputRef}/>
+                <input autoComplete='on' placeholder={'example@mail.com'} required ref={mailInputRef}/>
                 <input placeholder={'Your password'} required ref={passwordInputRef} type={'password'}/>
                 <button>log in</button>
             </form> 

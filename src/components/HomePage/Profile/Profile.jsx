@@ -1,11 +1,25 @@
 import React from 'react'
 import styles from '../Profile/Profile.module.css'
 import NavBar from '../NavBar/NavBar.jsx'
+import {useCookies} from 'react-cookie'
+import {LoggedOut} from '../../haveUser.jsx'
+import Burger from './Burger/Burger.jsx'
+import {useHistory} from 'react-router-dom'
+import ShowUserFoto from './ShowUserFoto/ShowUserFoto.jsx'
 
 const Profile = () => {
+    LoggedOut()
+    const [cookie] = useCookies()
+    const location = useHistory()
+    const users = JSON.parse(localStorage.getItem('users'))
+    const currentUser = users.filter(user => user.id === cookie.currentUserID)
+
     return (
         <div className={styles.profile}>
-            <h1>Profile</h1>
+            <Burger users={users} currentUser={currentUser}/>
+            <div style={{backgroundImage: `url(${currentUser[0].profilePhoto})`}} className={styles.userImg}></div>
+            <h1>{currentUser[0]?currentUser[0].name:location.push('/')}</h1>
+            <ShowUserFoto currentUser={currentUser}/>
             <NavBar/>
         </div>
     )

@@ -1,0 +1,26 @@
+@keyframes slidePhoto {from { margin-top:300%; } to { margin-top:0; } }
+
+.photoBlock {
+    position: absolute;
+    z-index: 2;
+    align-items: center;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: scroll;
+    height: 388%;
+    width: 261%;
+    padding: 20px 5px 0 5px;
+    right: 0;
+    background-color: #fff;
+    border: 2px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    animation: slidePhoto 0.5s ease  0s 1 normal;
+}
+img{
+    width: 100%;
+    transition: 0.3s;
+}
+.photoBox img:hover{
+    transform: scale(1.1);
+}

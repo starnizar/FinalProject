@@ -1,0 +1,17 @@
+    .userPhoto{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 47%;
+    width: 100%;
+    overflow: scroll;
+    border-top: 2px solid grey;
+}
+.userPhoto .photoBox{
+    width: 46%;
+    margin: 0 10px 20px;
+    transition: .5s;
+}
+.userPhoto img {
+    border-radius: 5px;
+}

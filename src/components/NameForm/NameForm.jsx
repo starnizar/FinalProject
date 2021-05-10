@@ -7,20 +7,21 @@ const NameForm = () => {
     const [,setCookies] = useCookies(['currentUserID'])
     const nameInputRef = useRef()
     const location = useHistory()
+    let allUsers = JSON.parse(localStorage.getItem('users'))
 
     const setName = (event) => {
         event.preventDefault()
         const userNameRegexp = /[-a-z0-9!#$%&'*+/=?^_`{|}~]+(\.[-a-z0-9!#$%&'*+/=?^_`{|}~]+)*/
-        if(userNameRegexp.test(nameInputRef.current.value) && nameInputRef.current.value ) {
-            let allUsers = JSON.parse(localStorage.getItem('users'))
-            allUsers[allUsers.length-1].userName = nameInputRef.current.value
-            localStorage.setItem('users', JSON.stringify(allUsers))
-            setCookies('currentUserID', allUsers[allUsers.length-1].id, { path: '/' })
-            alert(`Welcome, ${nameInputRef.current.value}!`)
-            location.push('/home')
-        } else {
-            alert('Use another name')
-        }
+        const userNames = allUsers.filter(user => user.name === nameInputRef.current.value);
+        if(userNames[0] === undefined) {
+            if(userNameRegexp.test(nameInputRef.current.value) && nameInputRef.current.value ) {
+                allUsers[allUsers.length-1].name = nameInputRef.current.value
+                localStorage.setItem('users', JSON.stringify(allUsers))
+                setCookies('currentUserID', allUsers[allUsers.length-1].id, { path: '/' })
+                alert(`Welcome, ${nameInputRef.current.value}!`)
+                location.push('/home')
+            } else alert('Use another name')
+        } else alert('You use existing user name')
     }
     return (
         <div className={styles.nameBox}>
@@ -29,7 +30,7 @@ const NameForm = () => {
             </Link>
             <h1>User Name</h1>
             <form className={styles.nameForm}>
-                <input ref={nameInputRef}/>
+                <input required ref={nameInputRef}/>
                 <button onClick={setName}>sign up</button>
             </form>
         </div>

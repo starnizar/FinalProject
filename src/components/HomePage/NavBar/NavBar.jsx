@@ -6,19 +6,19 @@ const NavBar = () => {
     return (
         <div className={styles.navBar}>
             <Link to={'/home'}>
-                <i class="fa fa-home"></i>
+                <i className="fa fa-home"></i>
             </Link>
             <Link to={'/search'}>
-                <i class="fa fa-search"></i>
+                <i className="fa fa-search"></i>
             </Link>
-            <Link className={styles.addBtn}>
-                <i class="fa fa-plus"></i>
+            <Link to={'/addphoto'}className={styles.addBtn}>
+                <i className="fa fa-plus"></i>
             </Link>
             <Link to={'/chats'}>
-                <i class="fa fa-comment"></i>
+                <i className="fa fa-comment"></i>
             </Link>
             <Link to={'/profile'}>
-                <i class="fa fa-user"></i>
+                <i className="fa fa-user"></i>
             </Link>
 
         </div>

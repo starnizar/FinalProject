@@ -2,8 +2,10 @@ import React from 'react'
 import styles from './LoggedOut.module.css'
 import icon from '../../assets/images/appIcon.svg'
 import {Link} from 'react-router-dom'
+import {LoggedIn} from '../haveUser.jsx'
 
-const LoggedOut = () => {
+const LoggedOut = () => {  
+    LoggedIn()
     return (
         <div className={styles.loggedOutForm}>
             <div className={styles.iconBox}>

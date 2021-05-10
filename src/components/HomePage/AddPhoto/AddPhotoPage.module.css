@@ -1,0 +1,22 @@
+.addPhotoPage {
+    height: 100%;
+    width: 100%;  
+    position: relative;  
+}
+
+.photoBox {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    overflow: scroll;
+    height: 89%;
+}
+.photoBox img {
+    max-width: 100%;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
