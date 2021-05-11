@@ -16,7 +16,7 @@ const Register = () => {
         if (usersMail[0] === undefined) {
             if (mailRegexp.test(mailInputRef.current.value)){
                 if (passwordInputRef.current.value.length > 5) {
-                    const usersList = [...users, {id: uniqid(), mail: mailInputRef.current.value, password: passwordInputRef.current.value, name: '', allPhoto: [], profilePhoto: ''}]
+                    const usersList = [...users, {id: uniqid(), mail: mailInputRef.current.value, password: passwordInputRef.current.value, name: '', allPhoto: [], profilePhoto: '', contacts:[]}]
                     setUsers(usersList)
                     localStorage.setItem('users', JSON.stringify(usersList))
                     location.push('/name')

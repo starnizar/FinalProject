@@ -6,6 +6,7 @@
     height: 100%;
     width: 100%;  
     position: relative;  
+    overflow: scroll;
 }
 .profileBlack{
     background-color: black;
@@ -17,7 +18,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 2px solid black;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 4px 8px 34px black;
 }

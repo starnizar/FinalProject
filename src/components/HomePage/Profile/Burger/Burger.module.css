@@ -1,9 +1,10 @@
 .burger {
     font-size: 40px;
     position: absolute;
-    right: 0;
-    top: 40px;
+    right: 4%;
+    top: 6%;
     transition: 0.05s;
+    
 }
 .burger:active{
     transform: rotate(45deg);
@@ -13,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     position: absolute;
-    right: 0;
+    right: 4%;
     top: 90px;
     transition: 1s;
     border-radius: 5px;
@@ -21,18 +22,19 @@
 }
 .burgerMenu button {
     font-weight: 600;
-    background-color: rgb(230, 230, 230);
+    background: linear-gradient(202.17deg, #d8d8d8 8.58%, #e4e4e4 91.42%);
     border-radius: 10px;
     margin-bottom: 5px;
-    border: 1px solid black;
+    border: 0.1px solid black;
     width: 180px;
     height: 40px;
     transition: 0.3s;
     text-transform: uppercase;
+    box-shadow: 0 0 6px grey;
 }
 .burgerMenu button:hover{
     background: linear-gradient(202.17deg, #FF00D6 8.58%, #FF4D00 91.42%);
-    box-shadow: 5px 5px  10px 1px rgb(0, 0, 0);
+    box-shadow: 0 0 10px 1px rgb(0, 0, 0);
     transform: scale(1.05);
 }
 .burgerMenu button:active {
