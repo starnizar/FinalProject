@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './ShowUserFoto.module.css'
 import {useCookies} from 'react-cookie'
 
 const ShowUserFoto = () => {
     const [cookie] = useCookies()
-    const users = JSON.parse(localStorage.getItem('users'))
+    const [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')))
+    //const users = JSON.parse(localStorage.getItem('users'))
     const currentUser = users.filter(user => user.id === cookie.currentUserID)
+    
     const deleteFoto = (id) => {
         currentUser[0].allPhoto.splice(id,1)
-        localStorage.setItem('users', JSON.stringify(users))
+        let updateUsers = [...users]
+        setUsers(updateUsers)
+        localStorage.setItem('users', JSON.stringify(updateUsers))
     }
+
     return (
         <div className={styles.userPhoto}>
         {currentUser[0] ? currentUser[0].allPhoto.map((photo, index) => (

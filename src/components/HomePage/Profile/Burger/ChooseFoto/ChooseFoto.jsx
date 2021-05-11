@@ -2,12 +2,14 @@ import styles from './ChooseFoto.module.css'
 import {useCookies} from 'react-cookie'
 
 
-const ChooseFoto = ({choose, setChoose}) => {
+const ChooseFoto = ({choose, setChoose, setUserPhoto}) => {
     const [cookie] = useCookies()
     let users = JSON.parse(localStorage.getItem('users'))
     const currentUser = users.filter(user => user.id === cookie.currentUserID)
     const setPhoto = (event) => {
         currentUser[0].profilePhoto = event.target.currentSrc
+        let userPhoto = currentUser[0].profilePhoto
+        setUserPhoto(userPhoto)
         localStorage.setItem('users', JSON.stringify(users))
         setChoose('none')
     }

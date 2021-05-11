@@ -15,7 +15,6 @@ const Chats = () => {
             userContacts.push(users[i])
         }
     }
-    console.log(userContacts);
     return (
         <div className={styles.chats}>
             <h1>Chats</h1>

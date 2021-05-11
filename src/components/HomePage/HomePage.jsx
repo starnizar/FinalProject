@@ -33,8 +33,8 @@ const HomePage = () => {
     }
     return (
         <div className={styles.home}>
-            <div className={styles.demoBox}>
             <h1>Discover</h1>
+            <div className={styles.demoBox}>
                 {photos && photos.map((item, index) => (
                     <div key={index} className={styles.photoBox}>
                         <div>

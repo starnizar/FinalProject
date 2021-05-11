@@ -4,7 +4,7 @@ import {useCookies} from 'react-cookie'
 import {useHistory} from 'react-router-dom'
 import ChooseFoto from './ChooseFoto/ChooseFoto.jsx'
 
-const Burger = ({users, currentUser}) => {
+const Burger = ({users, currentUser,setUserPhoto}) => {
     const location = useHistory()
     const [cross, setCross] = useState("fa fa-bars")
     const [show, setShow] = useState('none')
@@ -41,7 +41,7 @@ const Burger = ({users, currentUser}) => {
                 <i className={cross}></i>
             </div>
             <div style={{display: show}} className={styles.burgerMenu}>
-                <ChooseFoto choose={choose} setChoose={setChoose}/>
+                <ChooseFoto choose={choose} setChoose={setChoose} setUserPhoto={setUserPhoto}/>
                 <button onClick={showChoose}>Profile Foto</button>
                 <button onClick={logOut}>log out</button>
                 <button onClick={removeAcc}>remove account</button>

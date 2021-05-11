@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    height: 100%;
+    height: calc(100vh - 70px);
     width: 100%;  
     position: relative;  
     overflow: scroll;

@@ -9,12 +9,19 @@
     position: fixed;
     bottom: 0vh;
     max-width: 1024px;
-    box-shadow: 0px -1px 15px black;
+    box-shadow: 0 0 15px black;
 }
 .navBar a {
     margin-top: 5px;
     padding: 4px 15px;
     border-radius: 50%;
+    transition: .4s;
+}
+.navBar a:hover {
+  transform: scale(1.1);
+}
+.navBar a:active {
+  transform: scale(0.9);
 }
 .navBar .addBtn {
     transition: .3s;
@@ -39,44 +46,44 @@
 }
 @keyframes glow{
     25% {
-      box-shadow: 0px 10px 20px 5px #ed53a8;
+      box-shadow: 0 10px 20px 5px #ed53a8;
     }
     50% {
-      box-shadow: 0px 10px 20px 5px #e053ed;
+      box-shadow: 0 10px 20px 5px #e053ed;
     }
     75% {
-      box-shadow: 0px 10px 20px 5px #c953ed;
+      box-shadow: 0 10px 20px 5px #c953ed;
     }
     100% {
-        box-shadow: 0px 10px 20px 5px #a253ed;
+        box-shadow: 0 10px 20px 5px #a253ed;
       }
   }
   @keyframes moreglow{
     25% {
-      box-shadow: 0px 10px 30px 15px #ed53a8;
+      box-shadow: 0 10px 30px 15px #ed53a8;
     }
     50% {
-      box-shadow: 0px 10px 30px 15px #e053ed;
+      box-shadow: 0 10px 30px 15px #e053ed;
     }
     75% {
-      box-shadow: 0px 10px 30px 15px #c953ed;
+      box-shadow: 0 10px 30px 15px #c953ed;
     }
     100% {
-        box-shadow: 0px 10px 30px 15px #a253ed;
+        box-shadow: 0 10px 30px 15px #a253ed;
       }
   }
   @keyframes click{
     25% {
-      box-shadow: 0px 5px 10px 3px #ed53a8;
+      box-shadow: 0 5px 10px 3px #ed53a8;
     }
     50% {
-      box-shadow: 0px 5px 10px 3px #e053ed;
+      box-shadow: 0 5px 10px 3px #e053ed;
     }
     75% {
-      box-shadow: 0px 5px 10px 3px #c953ed;
+      box-shadow: 0 5px 10px 3px #c953ed;
     }
     100% {
-        box-shadow: 0px 5px 10px 3px #a253ed;
+        box-shadow: 0 5px 10px 3px #a253ed;
       }
   }
 
