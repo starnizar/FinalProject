@@ -1,5 +1,5 @@
 .App {
-  height: 90vh;
+  height: calc(100vh - 70px);
   max-width: 1024px;
   display: flex;
   justify-content: center;
@@ -7,4 +7,13 @@
   position: relative;
   box-shadow: 0px 2px 18px grey;
   font-family: sans-serif;
+}
+button, input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+::-webkit-scrollbar{
+  display: none;
 }

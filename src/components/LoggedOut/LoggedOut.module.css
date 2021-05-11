@@ -10,14 +10,18 @@
     align-items: center;
     justify-content: center;
 }
+.iconBox img {
+    width: 50vw;
+    min-width: 230px;
+    max-width: 500px;
+} 
 
 .logBox {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 a {
-    width: 50%;
 }
 
 .logBox button {
@@ -27,12 +31,13 @@ a {
     font-size: 13px;
     line-height: 15px;
     transition: 0.3s;
-    margin-top: 6%;
-    margin-left: 5%;
+    margin: 2vh auto;
     outline: none;
     text-transform: uppercase;
-    width: 90%;
-    height: 80%;
+    width: 25vw;
+    max-width: 250px;
+    min-width: 120px;
+    height: 70px;
     padding: 25px 12px 25px 12px;
     border-radius: 6px;
     cursor: pointer;
@@ -49,7 +54,12 @@ a {
     color: #fff;
     border: 2px solid black;
 }
-
+.logBox button:hover {
+    box-shadow: 0 0 10px 2px black;
+}
+.logBox button:active {
+    box-shadow: 0 0 10px black;
+}
 .loginBtn:active{
     background-color: black;
     color: white;

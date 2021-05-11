@@ -7,14 +7,14 @@ import Search from './components/HomePage/Search/Search.jsx'
 import Chats from './components/HomePage/Chats/Chats.jsx'
 import Profile from './components/HomePage/Profile/Profile.jsx'
 import AddPhotoPage from './components/HomePage/AddPhoto/AddPhotoPage.jsx'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {HashRouter, Switch, Route} from 'react-router-dom'
 import {CookiesProvider} from 'react-cookie'
 import './App.css';
 
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <CookiesProvider>
         <div className="App">
           <Switch>
@@ -48,7 +48,7 @@ function App() {
           </Switch>
         </div>
       </CookiesProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

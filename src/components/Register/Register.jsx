@@ -2,6 +2,7 @@ import {React, useState, useRef} from 'react'
 import styles from './Register.module.css'
 import {Link, useHistory} from 'react-router-dom'
 import uniqid from 'uniqid'
+import question from '../../assets/images/question.png'
 
 const Register = () => {
     const [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')) || [])
@@ -16,7 +17,7 @@ const Register = () => {
         if (usersMail[0] === undefined) {
             if (mailRegexp.test(mailInputRef.current.value)){
                 if (passwordInputRef.current.value.length > 5) {
-                    const usersList = [...users, {id: uniqid(), mail: mailInputRef.current.value, password: passwordInputRef.current.value, name: '', allPhoto: [], profilePhoto: '', contacts:[]}]
+                    const usersList = [...users, {id: uniqid(), mail: mailInputRef.current.value, password: passwordInputRef.current.value, name: '', allPhoto: [], profilePhoto: question, contacts:[]}]
                     setUsers(usersList)
                     localStorage.setItem('users', JSON.stringify(usersList))
                     location.push('/name')

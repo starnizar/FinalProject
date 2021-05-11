@@ -1,4 +1,4 @@
-@keyframes slidePhoto {from { margin-top:300%; } to { margin-top:0; } }
+@keyframes slidePhoto {from { margin-top:299%; } to { margin-top:0; } }
 
 .photoBlock {
     position: absolute;
@@ -8,6 +8,7 @@
     grid-template-columns: 1fr;
     overflow: scroll;
     height: 73.8vh;
+    max-height: 800px;
     width: 260px;
     padding: 20px 10px 0 10px;
     right: 0;

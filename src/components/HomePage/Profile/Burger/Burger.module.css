@@ -1,7 +1,7 @@
 .burger {
     font-size: 40px;
     position: absolute;
-    right: 4%;
+    right: 25px;
     top: 6%;
     transition: 0.05s;
     
@@ -14,18 +14,18 @@
     align-items: center;
     flex-direction: column;
     position: absolute;
-    right: 4%;
-    top: 90px;
+    right: 25px;
+    top: 12%;
     transition: 1s;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0);
 }
 .burgerMenu button {
     font-weight: 600;
-    background: linear-gradient(202.17deg, #d8d8d8 8.58%, #e4e4e4 91.42%);
+    background: white;
     border-radius: 10px;
     margin-bottom: 5px;
-    border: 0.1px solid black;
+    border: none;
     width: 180px;
     height: 40px;
     transition: 0.3s;

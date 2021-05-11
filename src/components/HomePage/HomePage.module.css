@@ -9,7 +9,7 @@
     margin-left: 10%;
 }
 .demoBox {
-    height: 90vh;
+    height: calc(100vh - 70px);
     overflow: scroll;
     background-color: rgb(238, 238, 238);
 }
@@ -21,6 +21,7 @@
 .photoBox img {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    width: 100%;
 }
 .photoBox i {
     font-size: 24px;
@@ -31,9 +32,13 @@
     align-items: center;
     justify-content: center;
     transition: 0.3s;
-    width: 20%;
+    width: 150px;    
+    height: 40px;
     border-radius: 5px;
     margin-left: 40%;
+}
+.addBox > *{
+    margin-top: 10px;
 }
 .addBox:hover {
     background: linear-gradient(202.17deg, #FF00D6 8.58%, #FF4D00 91.42%);

@@ -22,7 +22,8 @@ const Search = () => {
             if(currentUser[0].contacts.find(item => item === id) === undefined) {
                 currentUser[0].contacts.push(id)
                 localStorage.setItem('users',JSON.stringify(users))
-            } else {alert(`You already know, ${foundUser.name}`)}
+                alert(`You just followed "${foundUser.name}"`)
+            } else {alert(`You already know "${foundUser.name}"`)}
         } else {alert('It`s you, Dog!')}
     }
 

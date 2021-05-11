@@ -1,22 +1,48 @@
 .addPhotoPage {
-    height: 100%;
-    width: 100%;  
-    position: relative;  
+    width: 100%;    
 }
-
-.photoBox {
-    display: grid;
+.addPhotoPage h1 {
+    padding-top: 50px;
+    margin-left: 10%;
+}
+.searchBox {
+    margin: 0 auto;
+    width: 50vw;
+    min-width: 280px;
+    max-width: 800px;
+    flex-direction: column;
+    display: flex;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 10px;
-    column-gap: 10px;
-    overflow: scroll;
-    height: 89%;
 }
-.photoBox img {
-    max-width: 100%;
+.searchBox input {
+    width: 40vw;
+    min-width: 250px;
+    max-width: 500px;    font-size: 20px;
+    transition: .2s;
+    height: 30px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
 }
-
-::-webkit-scrollbar{
-    display: none;
+.searchBox input:active {
+    box-shadow: 0 0 2px black;
+}
+.searchBox button {
+    margin-top: 30px;
+    width: 150px;
+    height: 40px;
+    transition: .3s;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.searchBox button:hover {
+    box-shadow: 0 4px 14px black;
+}
+.searchBox button:active {
+    box-shadow: 0 1px 7px black;
+    
+    background: linear-gradient(202.17deg, #FF00D6 8.58%, #FF4D00 91.42%);
 }

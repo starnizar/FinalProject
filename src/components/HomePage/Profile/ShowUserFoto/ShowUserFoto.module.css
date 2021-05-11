@@ -26,3 +26,8 @@
 .photoBox i:active {
     transform: scale(1.5) rotate(360deg);
 }
+@media (max-width: 500px) {
+    .userPhoto .photoBox{
+        width: 92%;
+    }
+}

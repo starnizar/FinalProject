@@ -30,7 +30,7 @@ const NameForm = () => {
             </Link>
             <h1>User Name</h1>
             <form className={styles.nameForm}>
-                <input required ref={nameInputRef}/>
+                <input placeholder='User Name' required ref={nameInputRef}/>
                 <button onClick={setName}>sign up</button>
             </form>
         </div>
