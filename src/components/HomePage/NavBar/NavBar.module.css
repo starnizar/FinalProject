@@ -17,6 +17,7 @@
     border-radius: 50%;
 }
 .navBar .addBtn {
+    transition: .3s;
     position: relative;
     width: 20vw;
     min-width: 70px;
@@ -25,14 +26,69 @@
     margin-top: 0;
     background: linear-gradient(202.17deg, #FF00D6 8.58%, #FF4D00 91.42%);
     border-radius: 20px;
+    box-shadow: 0 10px 20px 5px #fa3b3b;
+    animation: glow 1s ease infinite alternate;
 }
+.navBar .addBtn:hover {
+    transform: scale(1.05);
+    animation: moreglow 1.5s ease infinite alternate;
+}
+.navBar .addBtn:active {
+    transform: scale(0.97);
+    animation: click 1.5s ease infinite alternate;
+}
+@keyframes glow{
+    25% {
+      box-shadow: 0px 10px 20px 5px #ed53a8;
+    }
+    50% {
+      box-shadow: 0px 10px 20px 5px #e053ed;
+    }
+    75% {
+      box-shadow: 0px 10px 20px 5px #c953ed;
+    }
+    100% {
+        box-shadow: 0px 10px 20px 5px #a253ed;
+      }
+  }
+  @keyframes moreglow{
+    25% {
+      box-shadow: 0px 10px 30px 15px #ed53a8;
+    }
+    50% {
+      box-shadow: 0px 10px 30px 15px #e053ed;
+    }
+    75% {
+      box-shadow: 0px 10px 30px 15px #c953ed;
+    }
+    100% {
+        box-shadow: 0px 10px 30px 15px #a253ed;
+      }
+  }
+  @keyframes click{
+    25% {
+      box-shadow: 0px 5px 10px 3px #ed53a8;
+    }
+    50% {
+      box-shadow: 0px 5px 10px 3px #e053ed;
+    }
+    75% {
+      box-shadow: 0px 5px 10px 3px #c953ed;
+    }
+    100% {
+        box-shadow: 0px 5px 10px 3px #a253ed;
+      }
+  }
 
 .navBar i {
     font-size: 24px;
     color: black;
 }
 #plus {
-    position: absolute;
-    left: 46%;
-    top: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#plus i {
+    opacity: 0.7;
 }

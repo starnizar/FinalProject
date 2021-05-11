@@ -14,6 +14,10 @@
     background-color: rgb(238, 238, 238);
 }
 .photoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-color: #fff;
     margin: 10px 5px;
     border-radius: 5px;
@@ -35,7 +39,6 @@
     width: 150px;    
     height: 40px;
     border-radius: 5px;
-    margin-left: 40%;
 }
 .addBox > *{
     margin-top: 10px;

@@ -4,6 +4,10 @@
     position: relative;  
     overflow: scroll;
 }
+.chats h1 {
+    padding-top: 50px;
+    margin-left: 10%;
+}
 .name {
     padding-top: 28px;
 }
@@ -37,4 +41,11 @@
     background-size: cover;
     min-width: 125px;
     min-height: 125px;
+}
+
+@media (max-width: 500px) {
+    .imgBox {
+        min-width: 95px;
+        min-height: 80px;
+    }
 }

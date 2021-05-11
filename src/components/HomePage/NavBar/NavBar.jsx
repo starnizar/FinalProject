@@ -11,8 +11,8 @@ const NavBar = () => {
             <Link to={'/search'}>
                 <i className="fa fa-search"></i>
             </Link>
-            <Link to={'/addphoto'}className={styles.addBtn}>
-                <i id={styles.plus} className="fa fa-plus"></i>
+            <Link id={styles.plus} to={'/addphoto'}className={styles.addBtn}>
+                <i className="fa fa-plus"></i>
             </Link>
             <Link to={'/chats'}>
                 <i className="fa fa-comment"></i>
