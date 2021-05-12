@@ -7,7 +7,7 @@ const NameForm = () => {
     const [,setCookies] = useCookies(['currentUserID'])
     const nameInputRef = useRef()
     const location = useHistory()
-    let allUsers = JSON.parse(localStorage.getItem('users'))
+    const allUsers = JSON.parse(localStorage.getItem('users'))
 
     const setName = (event) => {
         event.preventDefault()
@@ -23,9 +23,13 @@ const NameForm = () => {
             } else alert('Use another name')
         } else alert('You use existing user name')
     }
+    const remove = ()=> {
+        allUsers.splice([allUsers.length-1],1)
+        localStorage.setItem('users', JSON.stringify(allUsers))
+    } 
     return (
         <div className={styles.nameBox}>
-            <Link to={'/registration'}>
+            <Link to={'/registration'} onClick={remove}>
                 <i className="fa fa-arrow-left"></i>
             </Link>
             <h1>User Name</h1>

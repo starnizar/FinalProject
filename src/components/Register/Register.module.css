@@ -12,7 +12,7 @@
     flex-direction: column;
 }
 .register i {
-    transition: .5s;
+    transition: .3s;
     padding: 20px;
     font-size: 25px;
     color: black;
@@ -21,7 +21,7 @@
     transform: scale(1.3);
 }
 .register i:active {
-    transform: translateX(-51vw);
+    transform: translateX(-30px);
 }
 .register h1 {
     margin-left: 10%;
