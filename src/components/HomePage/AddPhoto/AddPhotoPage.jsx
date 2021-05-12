@@ -13,7 +13,7 @@ const AddPhotoPage = () => {
 
     const addFoto = () => {
         if(photoInputRef.current.value !==''){
-            currentUser[0].allPhoto.push(photoInputRef.current.value)
+            currentUser[0].allPhoto.unshift(photoInputRef.current.value)
             localStorage.setItem('users', JSON.stringify(users))
             alert('You just added new awesome PHOTO!!!')
         } else {alert('Field is empty!')}

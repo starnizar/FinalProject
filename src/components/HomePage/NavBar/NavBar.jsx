@@ -11,7 +11,7 @@ const NavBar = () => {
             <Link to={'/search'}>
                 <i className="fa fa-search"></i>
             </Link>
-            <Link id={styles.plus} to={'/addphoto'}className={styles.addBtn}>
+            <Link id={styles.plus} to={'/addphoto'} className={styles.addBtn}>
                 <i className="fa fa-plus"></i>
             </Link>
             <Link to={'/chats'}>
@@ -19,8 +19,7 @@ const NavBar = () => {
             </Link>
             <Link to={'/profile'}>
                 <i className="fa fa-user"></i>
-            </Link>
-
+            </Link> 
         </div>
     )
 }

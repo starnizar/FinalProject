@@ -5,7 +5,6 @@ import {useCookies} from 'react-cookie'
 const ShowUserFoto = () => {
     const [cookie] = useCookies()
     const [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')))
-    //const users = JSON.parse(localStorage.getItem('users'))
     const currentUser = users.filter(user => user.id === cookie.currentUserID)
     
     const deleteFoto = (id) => {

@@ -7,6 +7,7 @@ import Search from './components/HomePage/Search/Search.jsx'
 import Chats from './components/HomePage/Chats/Chats.jsx'
 import Profile from './components/HomePage/Profile/Profile.jsx'
 import AddPhotoPage from './components/HomePage/AddPhoto/AddPhotoPage.jsx'
+import AnotherUser from './components/HomePage/AnotherUser/AnotherUser.jsx'
 import {HashRouter, Switch, Route} from 'react-router-dom'
 import {CookiesProvider} from 'react-cookie'
 import './App.css';
@@ -44,6 +45,9 @@ function App() {
             </Route>
             <Route path={'/profile'}>
               <Profile/>
+            </Route>
+            <Route path={'/anotheruser'}>
+              <AnotherUser/>
             </Route>
           </Switch>
         </div>
