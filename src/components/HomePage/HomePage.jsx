@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './HomePage.module.css'
 import NavBar from './NavBar/NavBar.jsx'
+import Toast from '../Toast/Toast.jsx'
 import {LoggedOut} from '../haveUser.jsx'
 import {useCookies} from 'react-cookie'
    
@@ -9,6 +10,8 @@ const HomePage = () => {
     const [cookie] = useCookies()
     const [photos, setPhotos] = useState()
     const [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')))
+    const [msg, setMsg] = useState({text:'', show:'none', hide: '-100px', color:'#ffffff'})
+    const [num, setNum] = useState(0)
     const currentUser = users.filter(user => user.id === cookie.currentUserID)
     const userPhotos = currentUser[0].allPhoto
     useEffect(() => {
@@ -26,9 +29,22 @@ const HomePage = () => {
             const updateUsers = users
             setUsers(updateUsers)
             localStorage.setItem('users',JSON.stringify(updateUsers))
-            alert('Photo added to your profile')
+            const newMsg = {text:'Photo added to your profile', show:'flex', hide: '0', color:'#01ff22'}
+            const clearMsg = {text:'Photo added to your profile', show:'none', hide: '-100px', color:'#01ff22'}
+            if(msg.hide === '0'){
+                setMsg(clearMsg)
+                setTimeout(setMsg(newMsg), 50)
+            } else setMsg(newMsg) 
+            num === 0 ? setNum(1) : setNum(0)
+                    
         } else {
-            alert('You already have it')
+            const newMsg = {text:'You already have it', show:'flex', hide: '0', color:'#ff3939'}
+            const clearMsg = {text:'You already have it', show:'none', hide: '-100px', color:'#ffffff'}
+            if(msg.hide === '0'){
+                setMsg(clearMsg)
+                setTimeout(setMsg(newMsg), 50)
+            } else setMsg(newMsg) 
+            num === 0 ? setNum(1) : setNum(0)
         }
     }
     return (
@@ -47,6 +63,7 @@ const HomePage = () => {
                     </div>
                 ))}
             </div>
+            <Toast num={num} msg={msg} setMsg={setMsg}/>
             <NavBar/>
         </div>
     )
