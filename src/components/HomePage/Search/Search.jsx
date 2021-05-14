@@ -30,16 +30,16 @@ const Search = () => {
                 if(msg.hide === '0'){
                     setMsg(clearMsg)
                     setTimeout(setMsg(newMsg), 50)
-                } else setMsg(newMsg) 
-                num === 0 ? setNum(1) : setNum(0)
+                } else {setMsg(newMsg) 
+                num === 0 ? setNum(1) : setNum(0)}
             } else {
                 const newMsg = {text:`You already know "${foundUser.name}"`, show:'flex', hide: '0', color:'#ffffff'}
                 const clearMsg = {text:'', show:'none', hide: '-100px', color:'#ffffff'}
                 if(msg.hide === '0'){
                     setMsg(clearMsg)
                     setTimeout(setMsg(newMsg), 50)
-                } else setMsg(newMsg) 
-                num === 0 ? setNum(1) : setNum(0)
+                } else {setMsg(newMsg) 
+                num === 0 ? setNum(1) : setNum(0)}
             }
         } else {
             const newMsg = {text:'It`s you, Dog!', show:'flex', hide: '0', color:'#ffffff'}
@@ -47,8 +47,8 @@ const Search = () => {
                 if(msg.hide === '0'){
                     setMsg(clearMsg)
                     setTimeout(setMsg(newMsg), 50)
-                } else setMsg(newMsg) 
-                num === 0 ? setNum(1) : setNum(0)
+                } else {setMsg(newMsg) 
+                num === 0 ? setNum(1) : setNum(0)}
             }
     }
 

@@ -1,18 +1,18 @@
-    .userPhoto{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 47%;
-    width: 100%;
+.userPhoto{ 
+    column-width: 250px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 .userPhoto .photoBox{
-    width: 46%;
-    margin: 0 10px 20px;
+    width: 100%;
     transition: .5s;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px grey;
+    border-radius: 5px;
 }
 .userPhoto img {
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     width: 100%;
 }
 .photoBox i {
@@ -25,9 +25,4 @@
 }
 .photoBox i:active {
     transform: scale(1.5) rotate(360deg);
-}
-@media (max-width: 500px) {
-    .userPhoto .photoBox{
-        width: 92%;
-    }
 }

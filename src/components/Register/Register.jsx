@@ -9,6 +9,8 @@ const Register = () => {
     const mailInputRef = useRef()
     const passwordInputRef = useRef()
     const location = useHistory()
+    const [error, setError] = useState({show:'-58px', msg:'Welcom'})
+
 
     const addNewUser = (event) => {
         event.preventDefault()
@@ -21,9 +23,18 @@ const Register = () => {
                     setUsers(usersList)
                     localStorage.setItem('users', JSON.stringify(usersList))
                     location.push('/name')
-                } else alert('Password should have at least 6 symbols')
-            } else alert('Your email is incorrect!')
-        } else alert('This mail already in use')
+                } else {
+                    const errMsg = {show:'-18px', msg:'Password should have at least 6 symbols'}
+                    setError(errMsg)
+                }
+            } else {
+                const errMsg = {show:'-18px', msg:'Your email is incorrect!'}
+                setError(errMsg)
+            }
+        } else {
+            const errMsg = {show:'-18px', msg:'Email is already in use'}
+            setError(errMsg)
+        }
     }
     return (
         <div className={styles.register}>
@@ -31,9 +42,10 @@ const Register = () => {
                 <i className="fa fa-arrow-left"></i>
             </Link>
             <h1>Register</h1>
-            <form onSubmit={addNewUser} className={styles.registerForm}>
+            <form onChange={()=>setError({show:'-58px', msg:error.msg})} onSubmit={addNewUser} className={styles.registerForm}>
                 <input placeholder={'example@mail.com'} required ref={mailInputRef}/>
                 <input placeholder={'Your password'} required ref={passwordInputRef}/>
+                <p style={{marginTop:error.show}} className={styles.error}>{error.msg}</p>
                 <button>next</button>
             </form>
         </div>
