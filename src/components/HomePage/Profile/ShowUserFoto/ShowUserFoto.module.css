@@ -9,6 +9,7 @@
     margin-bottom: 20px;
     box-shadow: 0 0 10px grey;
     border-radius: 5px;
+    -webkit-column-break-inside: avoid;
 }
 .userPhoto img {
     border-top-left-radius: 5px;
